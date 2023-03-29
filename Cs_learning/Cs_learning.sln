@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs_learning", "Cs_learning\Cs_learning.csproj", "{C46CE21E-A26D-4362-BACE-A786E1620BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hws", "Hws\Hws.csproj", "{7C6EF924-FE3D-443F-94CF-F1AE90D88900}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C46CE21E-A26D-4362-BACE-A786E1620BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C46CE21E-A26D-4362-BACE-A786E1620BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C46CE21E-A26D-4362-BACE-A786E1620BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C46CE21E-A26D-4362-BACE-A786E1620BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C6EF924-FE3D-443F-94CF-F1AE90D88900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6EF924-FE3D-443F-94CF-F1AE90D88900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6EF924-FE3D-443F-94CF-F1AE90D88900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6EF924-FE3D-443F-94CF-F1AE90D88900}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45A40A4A-C55A-4168-936F-EA0E7D9EC9EA}
+	EndGlobalSection
+EndGlobal
