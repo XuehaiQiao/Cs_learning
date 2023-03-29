@@ -1,10 +1,9 @@
 ﻿using System;
-using 
 namespace Hws;
 
 public class Hw1
 {
-	public static void Main() {
+	public static void Main(string[] args) {
         // Hw1 sols = new Hw1();
         // test codes here
 	}
