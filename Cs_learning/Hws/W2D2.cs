@@ -1,82 +1,52 @@
 ﻿using System;
 namespace Hws;
 
-public class Hw1
+public class W2D2
 {
-	public static void Main(string[] args) {
-        // Hw1 sols = new Hw1();
-        // test codes here
-	}
-    // 1, 9, 217, 412
-    // leetcode 1
-    public int[] TwoSum(int[] nums, int target)
-    {
-        // O(n) using hashset
-        HashSet<int> numSet = new HashSet<int>(nums);
+	public static void Main()
+	{
 
-        for (int i = 0; i < nums.Length; i++)
+	}
+
+    //leetcode 15
+    public IList<IList<int>> ThreeSum(int[] nums)
+    {
+        IList<IList<int>> result = new List<IList<int>>();
+        Array.Sort(nums);
+        for (int i = 0; i < nums.Length - 2; i++)
         {
-            if (numSet.Contains(target - nums[i])) {
-                for (int j = 0; j < nums.Length; j++)
+            if (i == 0 || nums[i] != nums[i - 1])
+            {
+                int j = i + 1, k = nums.Length - 1;
+                while (j < k)
                 {
-                    if (j != i && nums[j] == target - nums[i])
+                    int sum = nums[i] + nums[j] + nums[k];
+                    if (sum == 0)
                     {
-                        return new int[] { i, j };
+                        result.Add(new List<int> { nums[i], nums[j], nums[k] });
+                        j++;
+                        k--;
+                        while (j < k && nums[j] == nums[j - 1])
+                        {
+                            j++;
+                        }
+                        while (j < k && nums[k] == nums[k + 1])
+                        {
+                            k--;
+                        }
+                    }
+                    else if (sum < 0)
+                    {
+                        j++;
+                    }
+                    else
+                    {
+                        k--;
                     }
                 }
             }
         }
-
-        return new int[2];
-    }
-
-    // leetcode 9
-    public bool IsPalindrome(int x)
-    {
-        String stringX = x.ToString();
-
-        int left = 0;
-        int right = stringX.Length - 1;
-
-        while(left < right)
-        {
-            if (stringX[left] != stringX[right]) return false;
-
-            left++;
-            right--;
-        }
-
-        return true;
-    }
-
-    // leetcode 217
-    public bool ContainsDuplicate(int[] nums)
-    {
-        HashSet<int> visited = new HashSet<int>();
-
-        foreach(int num in nums)
-        {
-            if (visited.Contains(num)) return true;
-            else visited.Add(num);
-        }
-
-        return false;
-    }
-
-    // leetcode 412
-    public IList<string> FizzBuzz(int n)
-    {
-        IList<String> answer = new List<String>();
-
-        for (int i = 1; i <= n; i++)
-        {
-            if (i % 3 == 0 && i % 5 == 0) answer.Add("FizzBuzz");
-            else if (i % 3 == 0) answer.Add("Fizz");
-            else if (i % 5 == 0) answer.Add("Buzz");
-            else answer.Add(i.ToString());
-        }
-
-        return answer;
+        return result;
     }
 }
 
